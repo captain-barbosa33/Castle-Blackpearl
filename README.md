@@ -36,9 +36,6 @@ As I embark on this adventure, you can follow my journey here:
 
 All the content in this repository is for educational purposes only. I do not condone any malicious activity or illegal behavior. I believe in ethical hacking and responsible disclosure of vulnerabilities. If you use any of the tools or techniques shared here, ensure you have permission to do so in the environment you're working in.
 
-## 💬 License
-
-This repository is open-source under the [MIT License](LICENSE).
 
 ---
 
