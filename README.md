@@ -24,14 +24,6 @@ As I continue to learn, I aim to:
 - Contribute to the **cybersecurity community** by sharing knowledge, collaborating on projects, and participating in open-source initiatives.
 - Stay up-to-date with the latest threats, tools, and trends in the ever-evolving world of cybersecurity.
 
-## 🏴‍☠️ Follow My Progress
-
-As I embark on this adventure, you can follow my journey here:
-
-- [Follow me on Twitter](https://twitter.com/captainbarbosa0)
-- [Check out my LinkedIn](https://www.linkedin.com/)
-- [Connect with me on Discord](https://discord.gg/)
-
 ## ⚠️ Disclaimer
 
 All the content in this repository is for educational purposes only. I do not condone any malicious activity or illegal behavior. I believe in ethical hacking and responsible disclosure of vulnerabilities. If you use any of the tools or techniques shared here, ensure you have permission to do so in the environment you're working in.
