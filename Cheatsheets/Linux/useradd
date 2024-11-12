@@ -1,0 +1,12 @@
+Use below command to add a new user with sudo permissions
+
+useradd -m <username>
+## -m creates a home directory for the user.
+passwd <username>
+## This will prompt you to enter a password.
+usermod -a -G sudo <username>
+## -a means add
+## -G sudo means to add the user to sudoers group
+chsh -s /bin/bash username
+## To delete the user
+userdel <username>
