@@ -1,4 +1,3 @@
-┌──(barbosa㉿kali)-[~/Castle-Blackpearl/HTB/Chemistry]
 └─$ sudo nmap -sV -sC 10.10.11.38
 [sudo] password for barbosa: 
 Starting Nmap 7.94SVN ( https://nmap.org ) at 2024-12-01 08:28 EST
