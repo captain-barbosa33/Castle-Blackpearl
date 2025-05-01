@@ -1,3 +1,0 @@
-# TCM_Security
-
-[Practical_Ethical_Hacking-The_Complete_Course](TCM_Security/Practical_Ethical_Hacking-The_Complete_Course.md)
